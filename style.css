@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+font-family:Roboto, poppins;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    background-color:white;
+}
+
+.main-container{
+    width:100%;
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+}
+
+header{
+    grid-column: 1/ -1;
+    position:fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    z-index: index 99;
+}
+
+header nav{
+    padding: 1em 2.5em;
+    background-color:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+header .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: gray;
+
+    span {
+color: blue;
+    }
+}
+ 
+header nav ul {
+    display: flex;
+    gap: 2rem;
+    padding: 1em;
+    background-color: red;
+    border-radius: 1em;
+
+    li{
+        list-style: none;
+    }
+    
+    a{
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+    }
+
+}
+
+header nav ul a:hover {
+    border-block-end: 2px solid white;
+}
+
+header button {
+    padding: .8em 1em;
+    border: none;
+    background-color: #394dbf;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    a { 
+        font-size: 1rem;
+       font-weight: bold;
+       color:white;
+       text-decoration: none;
+    }
+
+    img {
+        width: 15px;    
+        height: 15px;
+        margin-left: 2px;
+    }
+}
+.Donate-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgb(45, 31, 237);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.Donate-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.Donate-btn {
+    transition: 0.3s ease;
+}
+
+.Donate-btn:hover {
+    transform: scale(1.06);
+    opacity: 0.9;
+}
+
+
+.hero{
+    grid-column:1 / -1;
+    grid-row:2 / -1;
+    margin-top:20px;
+
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 100%;
+    padding: 1em;
+}
+
+.content {
+    padding: 10px 15px;
+}
+ 
+.content h1 {
+    font-size:clamp(2rem, 5rem, 6rem);
+    font-weight:bold;
+    color:black;
+
+    span{
+        color:red;
+    }
+}
+ img {
+    width: 40px;
+    height: 40px;
+ }
+
+ .content p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    margin-top: 10px;
+    max-height: 400px;
+ }
+
+ .content .btn {
+    margin-top: 10px;
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+ }
+
+ .content button{
+padding: .8em 1.3em;
+border: none;
+background-color: #394dbf;
+border-radius: 1em;
+font-size: 1.3rem;
+font-weight: 600;
+color: #ffff;
+cursor: pointer;
+ }
+
+ .content .btn img {
+    width: 30px;
+    height: 30px;
+    background-color: #0a92ed;
+    border-radius: 50%;
+ }
+
+.content button:hover{
+    opacity: .9;
+     transform: scale(1.06);
+}
+
+
+.gallery {
+    width: auto;
+    height: auto;
+    background:url(images/web.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    border-radius: 2em;
+    animation: slider 10s linear infinite;
+}
+
+main .gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/frame.jpg) no-repeat center;
+    background-size: cover;
+    mix-blend-mode: screen;
+}
+
+@keyframes slider{
+    0% {
+        background: url(images/web.jpg);
+        background-size: cover;
+    }
+
+    40% {
+        background: url(images/2.jpg);
+        background-size: cover;
+    }
+    70% {
+        background: url(images/3.jpg);
+        background-size: cover;
+    }
+     100%{
+        background:url(images/4.jpg) ;
+        background-size: cover;
+    }
+    130%{
+        background: url(images/5.jpg);
+        background-size: cover;
+    }
+}
+
+@media (min-width:502px) {
+    .hero{
+        grid-template-columns: 1fr 250px;
+    }
+
+    .gallery{
+        border-right: 50%;
+    }
+}
+@media (min-width:560) {
+
+    header nav ul{
+        display:flex;
+    }
+
+    .hero{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery{
+        padding: 0 2em;
+        border-radius:1em;
+    }
+}
