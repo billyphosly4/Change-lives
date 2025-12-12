@@ -11,8 +11,7 @@ html{
 }
 
 body{
-    background: linear-gradient(to right, #00a000 0%, #80ff80 50%, #ffffff 100%);
-
+    background:white;
 }
 
 .main-container{
@@ -38,15 +37,18 @@ header nav{
     display:flex;
     align-items:center;
     justify-content:space-between;
+      background:rgba(255,255,255,0.1);/*transparent*/
+    backdrop-filter:blur(12px);         /*the blur effect*/
+-webkit-backdrop-filter:blur(12px); /*safari support*/
 }
 
 header .logo {
     font-size: 1.3rem;
     font-weight: bold;
-    color: white;
+    color:black;
 
     span {
-color: gold;
+color: red;
     }
 }
  
@@ -56,6 +58,7 @@ header nav ul {
     padding: 1em;
     background-color: red;
     border-radius: 1em;
+    display: none;
 
     li{
         list-style: none;
@@ -183,7 +186,7 @@ cursor: pointer;
  .content .btn img {
     width: 30px;
     height: 30px;
-    background-color: #fffdd0;
+    background-color: #f9ed04;
     border-radius: 50%;
  }
 
