@@ -26,6 +26,7 @@ header{
     position:sticky;
     top:0;
     z-index: 1000;
+ 
     
 }
 
@@ -34,7 +35,7 @@ header nav{
     background-color:transparent;
     display:flex;
     align-items:center;
-    margin-top: 0;
+    
     justify-content:space-between;
     background:rgba(7, 243, 168, 0.1);/*transparent*/
     backdrop-filter:blur(12px);         /*the blur effect*/
@@ -128,6 +129,7 @@ header button {
     grid-template-rows: 1fr 1fr;
     max-width: 100%;
     padding: 1em;
+    margin-top: 60px;
 }
 
 .content {
