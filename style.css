@@ -426,9 +426,10 @@ margin-bottom: 20px;
 .close-btn {
   position: absolute;
   right: 15px;
-  top: 10px;
-  font-size: 22px;
+  top:80px;
+  font-size: 100px;
   cursor: pointer;
+  color:yellow ;
 }
 
 .mid{
